@@ -6,21 +6,26 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '19'
+sourceCompatibility = '17'
 
 repositories {
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://jitpack.io' }
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'com.google.guava:guava:30.0-jre'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '3.1.2'
+    implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '3.1.2' // local-cache caffeine
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '3.0.2'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.4'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+
 }
 
 tasks.named('test') {

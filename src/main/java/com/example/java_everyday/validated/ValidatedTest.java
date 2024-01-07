@@ -1,6 +1,5 @@
 package com.example.java_everyday.validated;
 
-
 import jakarta.validation.constraints.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +14,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 class BigPeople {
+
     @NotNull(message = "id不能为空")
     @Max(message = "id不能超过{value}个长度", value = 5)
     private Integer id;
