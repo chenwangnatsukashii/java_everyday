@@ -23,9 +23,12 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '3.0.2'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.4'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     implementation 'org.slf4j:slf4j-api:2.0.9'
 
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '3.0.6'
+    implementation group: 'org.redisson', name: 'redisson', version: '3.24.0'
 }
 
 tasks.named('test') {
