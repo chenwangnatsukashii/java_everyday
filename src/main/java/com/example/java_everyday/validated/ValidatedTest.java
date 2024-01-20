@@ -9,6 +9,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -26,6 +27,15 @@ class BigPeople {
     @NotNull(message = "age不能为空")
     @Range(message = "age的长度范围为{min}岁到{max}岁之间", min = 5, max = 10)
     private Integer age;
+
+    @Email
+    private String email;
+
+    @Future(message = "必须是未来的日期")
+    private Date future;
+
+    @Past(message = "必须是过去的日期")
+    private Date past;
 
     @Override
     public String toString() {

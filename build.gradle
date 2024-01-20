@@ -29,6 +29,8 @@ dependencies {
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '3.0.6'
     implementation group: 'org.redisson', name: 'redisson', version: '3.24.0'
+    implementation 'com.alibaba.fastjson2:fastjson2:2.0.43'
+    implementation 'commons-codec:commons-codec:1.15'
 }
 
 tasks.named('test') {
